@@ -4,8 +4,9 @@ import { dirname, resolve } from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const dbPath = resolve(__dirname, 'queue.db');
-
+const dbPath = process.env.NODE_ENV === 'production' 
+  ? '/app/data/queue.db' 
+  : './queue.db';
 const verboseSqlite = sqlite3.verbose();
 const db = new verboseSqlite.Database(dbPath);
 
