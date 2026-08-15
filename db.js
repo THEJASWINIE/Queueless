@@ -187,7 +187,7 @@ async function addToken({ id, name, phone, source }) {
       INSERT INTO tokens (id, token_number, name, phone, status, joined_at, created_date, source)
       VALUES (
         ?,
-        (SELECT COALESCE(MAX(token_number), 1000) + 1 FROM tokens WHERE created_date = ?),
+        (SELECT COALESCE(MAX(token_number), -1) + 1 FROM tokens WHERE created_date = ?),
         ?,
         ?,
         'waiting',
