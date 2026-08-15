@@ -1,0 +1,56 @@
+:root {
+  /* Color Palette - Warm, Calming Clinic Theme */
+  --bg-color: #FAF7F2;          /* Warm Cream Background */
+  --surface-color: #FFFFFF;     /* Pure White Card Surface */
+  --border-color: #EAE3D5;      /* Soft beige border */
+  
+  --primary-color: #4A6B53;     /* Sage Green Accent */
+  --primary-hover: #3B5542;     /* Darker Sage Green */
+  --primary-light: #EBF1EC;     /* Very soft light green background */
+  
+  --secondary-color: #D98A6C;   /* Peach/Terracotta Accent */
+  --secondary-hover: #C5775A;
+  --secondary-light: #FDF1ED;
+  
+  --text-primary: #2D3748;      /* Deep Slate/Charcoal */
+  --text-secondary: #718096;    /* Muted gray-blue */
+  --text-light: #A0AEC0;        /* Light grey for placeholders/dividers */
+  
+  /* Status Colors */
+  --color-waiting: #718096;
+  --color-in-progress: #4A6B53;
+  --color-completed: #2F855A;
+  --color-no-show: #C53030;
+  --color-cancelled: #A0AEC0;
+  
+  --bg-waiting: #EDF2F7;
+  --bg-in-progress: #E6FFFA;
+  --bg-completed: #F0FFF4;
+  --bg-no-show: #FFF5F5;
+  --bg-cancelled: #EDF2F7;
+  
+  --alert-gold-bg: #FFFDF5;
+  --alert-gold-border: #E5C158;
+  --alert-gold-text: #977215;
+
+  /* Typography */
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  /* Layout & Elevations */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(45, 55, 72, 0.08);
+  --shadow-lg: 0 12px 24px rgba(45, 55, 72, 0.12);
+  
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  
+  --container-width-patient: 450px;
+  --container-width-doctor: 650px;
+  --container-width-dashboard: 1200px;
+}
