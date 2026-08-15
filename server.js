@@ -176,26 +176,10 @@ app.get('/api/queue', async (req, res) => {
 });
 
 // Patient joins queue
-app.post('/api/queue/join', requireActiveSubscription, async (req, res) => {
-  const { name, phone } = req.body;
-  if (!name || !name.trim()) {
-    return res.status(400).json({ error: 'Name is required' });
-  }
-
-  try {
-    const id = crypto.randomUUID();
-    const token = await db.addToken({
-      id,
-      name: name.trim(),
-      phone: phone ? phone.trim() : null,
-      source: 'online'
-    });
-
-    await broadcastQueueState();
-    res.status(201).json({ success: true, token });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
+app.post('/api/admin/fix-settings', async (req, res) => {
+  await db.updateSetting('clinic_name', process.env.CLINIC_NAME || 'Oakridge Family Clinic');
+  await db.updateSetting('doctor_name', process.env.DOCTOR_NAME || 'Dr. Evelyn Stone');
+  res.json({ success: true });
 });
 
 // Receptionist adds walk-in patient
